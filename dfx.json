@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "motoko_backend": {
+      "candid": "src/motoko_backend/motoko_backend.did",
+      "package": "motoko_backend",
+      "type": "rust"
+    },
+    "motoko_frontend": {
+      "dependencies": [
+        "motoko_backend"
+      ],
+      "source": [
+        "src/motoko_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "motoko_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
